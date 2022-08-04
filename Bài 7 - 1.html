@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+  inputPhysic = prompt("Enter your physic mark");
+  inputChem = prompt("Enter your chemical mark");
+  inputBio = prompt("Enter your biology mark");
+  let Physic = parseInt(inputPhysic);
+  let Chem = parseInt(inputChem);
+  let Bio = parseInt(inputBio);
+  let sum = Physic + Chem + Bio;
+  let avg = sum/3;
+  document.write("Your total mark is:" + sum);
+  document.write("<br>")
+  document.write("Your average mark is:" + avg.toFixed(2));
+</script>
+</body>
+</html>

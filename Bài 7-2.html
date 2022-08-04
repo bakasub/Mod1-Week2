@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><h2>Amount</h2></th>
+        <th><h2>From Currency</h2></th>
+        <th><h2>To currency</h2></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="money" ></td>
+        <td>
+            <select id="dauvao">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="daura">
+                <option id="VND">VND</option>
+                <option id="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="convertmoney()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function convertmoney() {
+      let input = document.getElementById("money").value;
+      let a = document.getElementById("dauvao").value;
+      let b = document.getElementById("daura").value;
+      if(a  === 'VND' && b === 'USD'){
+        document.getElementById('result').innerHTML = 'So tien sau khi chuyen la : ' + ( input /23000) + 'USD'
+      }
+      if (a === 'USD' && b === 'VND'){
+        document.getElementById("result").innerHTML = 'So tien sau khi chuyen la : ' + (input*23000) + 'VND'
+      }
+      else if (a === b)
+        document.getElementById('result').innerHTML = 'So tien sau khi chuyen la khong doi '
+    }
+</script>
+</body>
+</html>
