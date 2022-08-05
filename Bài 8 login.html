@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Login</title>
 </head>
 <body>
-$END$
+<script>
+  let username = prompt("Enter your username");
+  if (username == 'TheLegend27'){
+    let password = prompt("Enter your password")
+    if (password == 'DankMemer'){
+      alert('Welcome!');
+    }
+    else if (password == null){
+      alert('Please fill in the password');
+    }
+    else
+      alert('Incorrect password')
+  } else if (username == null){
+    alert('Please fill in the username')
+  } else{
+    alert('Incorrect username')
+  }
+</script>
+
 </body>
 </html>
