@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Ratio</title>
+</head>
+<body>
+<h1> Tính chỉ số cân nặng</h1>
+<form>
+    <p>Nhập cân nặng (kg)</p><input type="number" id="weight"><br><br>
+    <p>Nhập chiều cao (m)</p><input type="number" id="height"><br><br>
+    <button type="button" onclick="check()">Kiểm tra</button>
+    <br><br>
+    <p id="result"></p>
+</form>
+<script>
+    let weight1 = document.getElementById("weight")
+    let height1 = document.getElementById("height")
+    let bmi = weight1 / (height1 ^ 2)
+
+    function check() {
+        document.getElementById('result').value = eval(bmi)
+        if(bmi<18.5){
+          alert('Underweight')}
+        if(bmi>= 18.5 && bmi<25.0){
+          alert('Normal')
+        }
+        if(bmi>= 25.0 && bmi<30){
+          alert('Overweight')
+        }
+        else
+          alert('Obese')
+
+    }
+</script>
+</body>
+</html>

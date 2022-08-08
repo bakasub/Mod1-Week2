@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+</head>
+<body>
+<form style="text-align: center">
+    <h1>Do you love me?</h1>
+    <button type="button" onclick="yes()">Yes</button>
+    <button type="button" onmouseover="no()" style="position: absolute" id="nobtn">No</button>
+</form>
+<script>
+    let maxWidth = window.innerWidth
+    let maxHeight = window.innerHeight
+    function yes() {
+        alert('<3')
+    }
+
+    function no() {
+        document.getElementById('nobtn').style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+        document.getElementById('nobtn').style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
+    }
+</script>
+</body>
+</html>
