@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = 0
+  let b = 1
+  let sum = 0
+  let temp
+  for (i=0; i<100 ;i++) {
+    document.write(a + ' <br>')
+    sum += a
+    temp = a + b
+    a = b
+    b = temp
+    if (temp%5===0){
+      document.write('Số ' + temp + 'là số đầu tiên trong fibonacci chia hết cho 5')
+      break
+    }
+  }
+</script>
+</body>
+</html>

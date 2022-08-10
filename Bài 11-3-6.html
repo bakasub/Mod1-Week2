@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số</title>
+</head>
+<body>
+<script>
+   let a=1
+   let sum = 0
+   let count = 0
+   for (i=1 ; ;i++ ){
+       if (a % 7 != 0) {
+           a++
+       } else {
+           sum = sum + a
+           a++
+           count++
+           if (count===30){break}
+       }
+
+   }
+   document.write(sum)
+
+</script>
+
+</body>
+</html>
