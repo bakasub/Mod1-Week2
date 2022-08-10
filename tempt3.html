@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even more somehow</title>
+</head>
+<body>
+<script>
+    let inputCount = prompt('Số lượng số NT')
+
+    let PNcount = 0
+    for (let i = 2; ; i++){
+        let lasoNT = true;
+        for (let checksoNT = 2 ; checksoNT < i; checksoNT++ ){
+            if (i % checksoNT === 0 ){
+                lasoNT = false
+                document.write(i + ' không phải so nguyen to' + '</br>')
+                break;
+            }
+        }
+        if(lasoNT){
+            PNcount += 1;
+            document.write(i + ' la so nguyen to' + '</br>')
+        }
+        if(PNcount === inputCount){
+            break;
+        }
+    }
+</script>
+</body>
+</html>
